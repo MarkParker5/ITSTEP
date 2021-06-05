@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Forms</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+<!-- method:
+	GET  - адресная строка (вспомогательные данные)
+	POST - передает файлы в закрытой форме
+-->
+
+
+<form action="" method="GET" name="first">
+	<label>Login <input type="text" name="login" placeholder="login" value=""></label><br>
+	<label for="pass">Password </label><input type="password" name="password" placeholder="password" id="pass"><br>
+	
+	<!-- 	
+	<label for="tea">Tea</label>
+	<input type="radio" name="drink[]" id="tea" checked="checked">
+	<label for="milk">Milk</label>
+	<input type="radio" name="drink[]" id="milk"> -->
+
+	<label for="tea">Tea</label>
+	<input type="checkbox" name="drink[]" id="tea" checked="checked">
+	<label for="milk">Milk</label>
+	<input type="checkbox" name="drink[]" id="milk"> <br>
+
+	<label for="test">Test</label>
+	<input type="range" name="test" id="test" min="-100" max="100" step="20"><br>
+
+	<textarea name="msg" id="msg" cols="30" rows="10" placeholder="Lorem"></textarea><br>
+
+	<select name="color">
+		<option value="Red">Red</option>
+		<option value="Green">Green</option>
+		<option value="Blue">Blue</option>
+	</select><br>
+
+	<input type="reset" name="reset" value="Clear">
+	<input type="submit" name="submit" value="Send"></form>
+
+<br> <!-- -->
+
+<form action="">
+	<h2>Анкета посетителя ресторана</h2>	
+	<fieldset>
+		<legend>Контактная информация</legend>
+		<div>
+			<label for="name">Имя</label>
+			<input type="text" id="name" name="name">
+		</div>
+		<div>
+			<label for="phone">Телефон</label>
+			<input type="tel" id="phone" name="phone">
+		</div>
+		<div>
+			<label for="email">Email</label>
+			<input type="email" id="email" name="email">
+		</div>
+		<div>
+			<label for="date">Дата посещения</label>
+			<input type="date" id="date" name="date">
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Персональная информация</legend>
+		<div>
+			<label for="age">Возраст</label>
+			<input type="number" id="age" name="age" min="10" max="120">
+		</div>
+		<div>
+			<label for="kitchen">Любимая кухня</label>
+			<select name="kitchen" id="kitchen">
+				<option value="grz">Грузинская кухня</option>
+				<option value="mex">Мексиканская кухня</option>
+				<option value="frc">Французкая кухня</option>
+			</select>
+		</div>
+		<div>
+			<label for="dishes">Какие блюда?</label>
+			<textarea name="dishes" id="dishes"></textarea>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Оценка нашего заведения</legend>
+		<h3>Почему вы выбрали наше заведение?</h3>
+		<div>
+			<label><input type="radio" name="reason">Недалеко от дома</label>
+		</div>
+		<div>
+			<label><input type="radio" name="reason">Увидел рекламу</label>
+		</div>
+		<div>
+			<label><input type="radio" name="reason">Посоветовали</label>
+		</div>
+		<div>
+			<label><input type="radio" name="reason">Цена/качество</label>
+		</div>
+		<h3>Будете ли вы рекомендовать наше заведение?</h3>
+		<div>
+			<label><input type="radio" name="answer">Да</label>
+		</div>
+		<div>
+			<label><input type="radio" name="answer">Нет</label>
+		</div>
+	</fieldset>
+	<input type="submit" name="final" id="final" value="Отправить"></form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

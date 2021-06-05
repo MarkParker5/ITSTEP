@@ -1,0 +1,12 @@
+body{
+	background-color: #FFCD36;
+}
+.container{
+	background: url(img/bg.jpg) repeat-x;
+	background-position: bottom;
+	height: 100%;
+	position: absolute;
+}
+.text{
+	margin: 40px;
+}

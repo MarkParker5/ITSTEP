@@ -1,0 +1,14 @@
+div img{
+	float: left;
+	height: 200px;
+	margin: 0 10px;
+}
+.head{
+	font-size: 130%;
+}
+.actors, .producer, .links{
+	margin-top: -15px;
+}
+.links{
+	word-spacing: 50px;
+}

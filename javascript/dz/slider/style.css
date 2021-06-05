@@ -1,0 +1,47 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body>div{
+	background: #444;
+	padding: 10px;
+	text-align: center;
+}
+body>div>.big-image{
+	margin: 0;
+	width: 500px;
+	height: 500px;
+	background: url(images/big/1.jpg) no-repeat;
+	background-size: cover;
+	margin: 5px auto;
+	box-shadow: 5px 5px 10px #000;
+}
+div>ul>li{
+	display: inline-block;
+	list-style: none;
+}
+div>ul>li>img{
+	width: 100px;
+	height: auto;
+	margin: 5px;
+	box-shadow: 1px 1px 5px #000;
+}
+ol{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+ol>li{
+	display: none;
+	width: 100%;
+	list-style: none;
+	color: white;
+	font-size: 2em;
+	font-family: sans-serif;
+	position: absolute;
+	bottom: 0;
+	background-color: #1117;
+}
+#text0{
+	display: block;
+}

@@ -1,0 +1,72 @@
+﻿<html>
+<head>
+<title>REg</title>
+<meta charset="utf-8"/>
+</head>
+<body>
+
+<p id="test1">Lorem 10 dolor 1854 final 12.45 1958 lorem</p>
+
+<pre id="test2">
+Yesterday, all my troubles seemed so far away
+Now it looks as though they're here to stay
+Oh, I believe in yesterday.
+
+Suddenly, I'm not half to man I used to be,
+There's a shadow hanging over me.
+Oh, yesterday came suddenly.
+
+Why she had to go 
+I don't know she woldn't say.
+I said something wrong, 
+now I long for yesterday.
+
+Yesterday, love was such an easy game to play.
+Now I need a place to hide away.
+Oh, I believe in yesterday.
+</pre>	
+    
+<form action="" name="form1">
+	<input type="text" name="login">
+	<input type="button" value="Enter" disabled="true" name="send">
+</form>
+    
+<script>
+let test1 = document.getElementById('test1');
+let test2 = document.getElementById('test2');
+let str1 = test1.innerHTML;
+let str2 = test2.innerHTML;
+
+//let pt = /\b[a-z]*ay\b/gi;
+//let pt = /\w+ou\w+/gi;
+
+//.search - index of first
+//.match - first array
+//.replace - replace
+
+let input = document.forms['form1'].elements['login'];
+let btn = document.forms['form1'].elements['send'];
+
+input.addEventListener('input', () => {
+	let pt = /\W/;
+	if(input.value.search(pt) + 1){					//if(input.value.test(pt))
+		btn.disabled = true;
+		input.style.outline = '1px solid #f00';
+	}else{
+		btn.disabled = false;
+		input.style.outline = '1px solid #00f';
+	}
+})
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
+

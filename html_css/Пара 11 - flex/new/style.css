@@ -1,0 +1,41 @@
+html{
+	scroll-behavior: smooth;
+}
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.container{
+	display: flex;
+	min-height: 100vh;
+	height: auto;
+	flex-direction: column;	
+	background-color: gray;
+}
+main{
+	display: flex;
+	flex-direction: row;
+	background-color: pink;
+	flex: 1 1 auto;
+}
+nav{
+	order: -1;
+	flex: 1 0 15%;
+	text-align: center;
+}
+aside{
+	flex: 1 0 15%;
+	text-align: center;
+}
+article{
+	background-color: lightblue;
+	flex: 1 0 70%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+}
+article div{
+	padding: 20px;
+	flex-basis: 30%;
+}

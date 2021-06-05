@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    #container {
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+      background: #ddd;
+      overflow: auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    Прокрути надо мной.
+    Прокрутка: <span id="delta">0</span>
+  </div>
+  <script>
+    var elem = document.getElementById('container');
+
+    if (elem.addEventListener) {
+		if ('onwheel' in document) {
+			// для IE9+, FF17+
+			elem.addEventListener("wheel", elemWheel);
+		} 
+		else if ('onmousewheel' in document) {
+			// устаревший вариант события
+			elem.addEventListener("mousewheel", elemWheel);
+		} 
+		else {
+			// Firefox < 17
+			elem.addEventListener("MozMousePixelScroll", elemWheel);
+		}
+    } 
+	else { 
+		// только для IE8
+		elem.attachEvent("onmousewheel", elemWheel);
+    }
+
+    // Это решение предусматривает поддержку IE8
+    var step = 0;
+    function elemWheel(e) {
+      e = e || window.event;
+
+      // deltaY, detail содержат пиксели
+      // wheelDelta не дает возможность узнать количество пикселей
+      // onwheel || MozMousePixelScroll || onmousewheel
+      var delta = e.deltaY || e.detail || e.wheelDelta;
+
+      var info = document.getElementById('delta');
+
+      info.innerHTML = +info.innerHTML + delta;
+      
+	    // для событий по умолчанию
+      //e.preventDefault ? e.preventDefault() : (e.returnValue = false);
+      if(delta > 0){ step += 10 }
+      else if(delta < 0){ step -= 10 }
+      elem.style.marginTop = step+'px';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+<form name="test">
+	<select name="color" id="colors" >
+    	<option>выберите цвет</option>
+    	<option value="#ffdddd">красный</option>
+        <option value="#ddffdd">зеленый</option>
+        <option value="#ddddff">синий</option>
+    </select>
+    <br /><br />
+    <input type="file" id="file" name="file"/>
+    <br />
+    <br />
+	<input type="button" value="click me" />
+</form>
+
+
+<script>
+let form = document.forms['test'];
+let colors = form.elements['color'];
+let btn = document.querySelector('[type = "button"]');
+let file = form.elements['file'];
+
+btn.addEventListener('click', () => {
+    color = colors.options[colors.selectedIndex].value;
+    colors.style.background = color;
+})
+
+colors.addEventListener('change', () => {
+    colors.blur();
+    colors.disabled = true;
+    file.click();
+})
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

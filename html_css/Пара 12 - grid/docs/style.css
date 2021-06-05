@@ -1,0 +1,59 @@
+.grid{
+	min-width: 570px;
+	width: 80vw;
+	max-width: 900px;
+	height: 80vh;
+	border: 1px solid red;
+	display: grid;
+/*	grid-template-rows: 70px 50px auto 20%;
+	grid-template-columns: repeat(2, 2fr 4fr);*/
+	grid-template: 70px 50px auto 20% / repeat(2, 2fr 4fr);
+
+	grid-template-areas: 	"logo header header header"
+							". main main ."
+							"leftside main main rightside"
+							". 		footer footer		.";
+
+	/*grid: 	"logo header header header" 	70px
+			"leftside . 	. rightside"	50px
+			"leftside main main rightside" 	auto
+			". 		footer footer		." 	10%
+			/ 2fr 4fr 2fr 4fr;
+	grid-gap: 5px;*/
+	/* Выравнивание
+	place-content: align-content justify-content;
+	place-items: align-items justify-items;
+	place-self: align-self justify-self;
+	*/
+}
+.cell{
+	border: 1px solid #555;
+	background: #eee;
+}
+/*.cell1{
+	grid-row: 1/3;
+	grid-column: 1/4;
+	z-index: 1;
+}
+.cell2{
+	grid-row: 2/4;
+	grid-column: 2/5;
+}*/
+.cell1{
+	grid-area: logo;
+}
+.cell2{
+	grid-area: header;
+}
+.cell3{
+	grid-area: leftside;
+}
+.cell4{
+	grid-area: main;
+}
+.cell5{
+	grid-area: rightside;
+}
+.cell6{
+	grid-area: footer;
+}

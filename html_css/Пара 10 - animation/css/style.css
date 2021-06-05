@@ -1,0 +1,116 @@
+/*.rubberBand, .wobble{
+	color: orange;
+	text-align: center;
+	font-size: 46pt;
+}
+.rubberBand:hover{
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	color: red;
+	transition: 1s;
+}*/
+/*
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.first ol{
+	margin-bottom: 50px;
+}
+.first ol, .first ul{
+	list-style: none;
+}
+ul{
+	overflow: hidden;
+	height: 0;
+	transition: height 1s;
+}
+.first ul:target{
+	height: 60px;
+}
+.first a:focus+ul{
+	height: 60px;
+}
+
+input[name="group"]{
+	display: none;
+}
+input:checked~ul{
+	height: 60px;
+}*/
+
+div{
+	position: relative;
+	width: 600px;
+	height: 400px;
+}
+input[name="pic"]{
+	display: none;
+}
+label{
+	display: block;
+	position: relative;
+	width: 20px;
+	height: 25px;
+	background: gray;
+	top: 250px;
+	z-index: 10;
+	margin: 5px 0;
+	color: white;
+	font-size: 18pt;
+}
+section{
+	position: absolute;
+	width: 600px;
+	height: 600px;
+	top: 0;
+	left: 0;
+}
+article{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+article:nth-child(1){
+	background-color: red;
+}
+article:nth-child(2){
+	background-color: orange;
+}
+article:nth-child(3){
+	background-color: yellow;
+}
+article:nth-child(4){
+	background-color: green;
+}
+article:nth-child(5){
+	background-color: blue;
+}
+#pic1:checked~section>article:nth-child(1){
+	z-index: 5;
+}
+#pic2:checked~section>article:nth-child(2){
+	z-index: 5;
+}
+
+#pic3:checked~section>article:nth-child(3){
+	z-index: 5;
+}
+
+#pic4:checked~section>article:nth-child(4){
+	z-index: 5;
+}
+
+#pic5:checked~section>article:nth-child(5){
+	z-index: 5;
+}
+
+
+
+/*start %0 %0*/
+
+

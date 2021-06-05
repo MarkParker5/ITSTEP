@@ -1,0 +1,19 @@
+.window{
+  width:300px; 
+  height: 260px; 
+  overflow: hidden;
+  margin: 100px auto;
+  position: relative;
+}
+#thumbs{
+  width: 5100px;
+  height: 100%;
+  position: absolute;
+  top: 0; 
+  left: 0;
+}
+#thumbs img{
+  width: 300px;
+  height: 260px;
+	float: left;
+}

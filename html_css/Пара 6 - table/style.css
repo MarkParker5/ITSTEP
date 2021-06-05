@@ -1,0 +1,98 @@
+.table-1{
+	margin-top: 50px;
+	border-collapse: collapse;
+	width: 100%;
+	height: 333px;
+}
+.table-1 td, .table-1 th{
+	border: 1px solid #666;
+	padding: 11px;
+	text-align: center; /* left/right/center */
+	vertical-align: middle; /* top/bottom/middle             ИМЕННО MIDDLE, А НЕ CENTER!!! */
+}
+.table-1 caption{
+	text-align: right;
+	caption-side: bottom;
+}
+.table-2{
+	width: 100%;
+	height: 200px;
+	border-collapse: collapse;
+}
+.table-2 td{
+	border: 1px solid black;
+	text-align: center;
+}
+.table-3{
+	width: 100%;
+	height: 200px;
+	border-collapse: collapse;
+	margin-top: 50px;
+}
+.table-3 td{
+	border: 1px solid white;
+}
+.red{
+	background-color: red;
+}
+.blue{
+	background-color: blue;
+}
+.yellow{
+	background-color: yellow;
+}
+.green{
+	background-color: green;
+}
+.lightblue{
+	background-color: lightblue;
+}
+.table-4{
+	width: 100%;
+	height: 50px;
+	border-collapse: collapse;
+	margin-top: 50px;
+}
+.table-4 td{
+	border: 1px solid black;
+	text-align: left;
+}
+.thead td{
+	text-align: center;
+	font-weight: 700;
+}
+.list strong{ /*strong - дочерний для list*/
+	text-decoration: underline;
+}
+.list li>strong{ /*strong - прямой дочерний для li*/
+	color: red;
+}
+table+ul{ /* применяется у ul, который сразу после table (сестринский селектор)*/
+	margin-left: 50px;
+}
+table~ul{/* применяется ко всем ul, которые идут после table на одном уровне вложеност*/
+	list-style-type: circle;
+}
+a[target]{ /*a с атрибутом target*/
+	color: red
+}
+a[target="blank"]{  /* a[target=blank] */
+	text-transform: uppercase;
+}
+a[href^="http"]{ /*a с атрибутом href, который начинается на http */
+	text-decoration: none;
+}
+a[href$=".jpg"]{ /*a с атрибутом href, который заканчивается на jpg */
+	text-decoration: overline;
+}
+li:nth-child(3n+1){
+	background-color: yellow;
+}
+/*
+li:nth-child(2)
+li:nth-child(even)
+li:nth-child(odd)
+li:nth-child(3n)
+li:nth-child(3n+1)
+&&&&&&&&&&&&&&&&&&&&&&
+*/

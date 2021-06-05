@@ -1,0 +1,59 @@
+h1{
+	color: #A20000;
+	letter-spacing: 20px;
+}
+p{
+	font-family: times new roman;
+	text-indent: 20px;
+}
+p:first-letter{
+	font-family: "Times New Roman", Times, serif;
+    font-size: 200%;
+    color: #A20000;
+}
+.text-center{
+	text-align: center;
+}
+.text-orange{
+	color: orange;
+	word-spacing: 5px;
+	line-height: 25px;
+}
+.text-orange span{
+	font-size: 125%;
+}
+.text-red{
+	color: red;
+	font-size: 140%;
+
+}
+.text-red p {
+	text-indent: 20px;
+}
+.text-red p:first-letter{
+	color: red;
+}
+.text-violet{
+	color: violet;
+	letter-spacing: 0px;
+	line-height: 10px;
+}
+.text-purple{
+	color: purple;
+}
+.text-green{
+	color: green;
+	text-align: center;
+	font-family: Impact;
+	text-decoration: overline;
+	font-size: 150%;
+}
+.text-green:first-letter{
+	font-family: Impact;
+    font-size: 100%;
+    color: green;
+}
+.text-blue{
+	word-spacing: 30px;
+	color: blue
+}

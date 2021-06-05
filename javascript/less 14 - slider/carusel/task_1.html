@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Карусель</title>
+<style>
+
+#prev{
+	width:55px;
+	height:60px;
+	background:url(images/button.png);
+	position:absolute;
+	top:40px;
+	left:0;
+	}
+#prev:hover{
+	background-position: 0 -120px;
+	}
+
+#next{
+	width:55px;
+	height:60px;
+	background:url(images/button.png) 0 -60px;
+	position:absolute;
+	top:40px;
+	right:0;
+	}
+#next:hover{
+	background-position: 0 -180px;
+	}
+
+.gallery{position:relative;
+width:570px}
+
+#thumbs{margin:0 55px}
+
+
+
+/*-------- 2 ВАРИАНТ----------*/
+#prev2, #prev0{
+	width:55px;
+	height:60px;
+	background:url(images/button.png);
+	position:absolute;
+	top:40px;
+	left:0;
+	}
+#prev2:hover, #prev0:hover{
+	background-position: 0 -120px;
+	}
+
+#next2, #next0{
+	width:55px;
+	height:60px;
+	background:url(images/button.png) 0 -60px;
+	position:absolute;
+	top:40px;
+	right:0;
+	}
+#next2:hover, #next0:hover{
+	background-position: 0 -180px;
+	}
+
+.gallery2, .gallery0{position:relative;
+width:570px;
+margin-top:50px}
+
+#thumbs2, #thumbs0{
+width:3000px;
+position:absolute;
+top:0; left:0;}
+
+#thumbs2 img, #thumbs0 img{
+	float:left;
+	margin: 0 2px;
+	}
+
+.window{width:462px; overflow:hidden;margin:0 55px;
+position:relative;
+height:130px; }
+
+
+/*-------- 3 ВАРИАНТ----------*/
+.gallery3{
+  position:relative;
+  width:570px;
+  margin-top:50px}
+
+#thumbs3{
+  width:3000px;
+  position:absolute;
+  top:0; 
+  left:0;
+}
+
+#thumbs3 img{
+	float:left;
+	margin: 0 2px;
+}
+
+.window3{
+  width:462px; 
+  overflow:hidden;
+  margin:0 55px;
+  position:relative;
+  height:130px; 
+}
+
+
+
+</style>
+</head>
+
+<body>
+  <div class="gallery0">
+    
+      <div id="prev0"></div>
+        <div id="next0"></div>
+        <div class="window">
+            <div id="thumbs0">
+              <img src="images/1.jpg" width="150" height="130" />
+              <img src="images/2.jpg" width="150" height="130" />
+              <img src="images/3.jpg" width="150" height="130" />
+              <img src="images/4.jpg" width="150" height="130" />
+              <img src="images/5.jpg" width="150" height="130" />
+              <img src="images/6.jpg" width="150" height="130" />
+              <img src="images/7.jpg" width="150" height="130" />
+              <img src="images/8.jpg" width="150" height="130" />
+              <img src="images/9.jpg" width="150" height="130" />
+              <img src="images/10.jpg" width="150" height="130" />
+              <img src="images/11.jpg" width="150" height="130" />
+              <img src="images/12.jpg" width="150" height="130" />
+              <img src="images/13.jpg" width="150" height="130" />
+              <img src="images/14.jpg" width="150" height="130" />
+              <img src="images/15.jpg" width="150" height="130" />
+              <img src="images/16.jpg" width="150" height="130" />
+              <img src="images/17.jpg" width="150" height="130" />
+            </div>   
+        </div>
+    </div>
+
+  <br>
+  <br>
+  <br>
+
+	<div class="gallery">
+    
+    	<div id="prev"></div>
+      <div id="next"></div>
+        
+    	<div id="thumbs">
+          <img src="images/1.jpg" width="150" height="130" />
+          <img src="images/2.jpg" width="150" height="130" />
+          <img src="images/3.jpg" width="150" height="130" />
+      	</div>   
+    </div>
+
+
+
+
+	<div class="gallery2">
+    
+    	<div id="prev2"></div>
+        <div id="next2"></div>
+        <div class="window">
+            <div id="thumbs2">
+              <img src="images/1.jpg" width="150" height="130" />
+              <img src="images/2.jpg" width="150" height="130" />
+              <img src="images/3.jpg" width="150" height="130" />
+              <img src="images/4.jpg" width="150" height="130" />
+              <img src="images/5.jpg" width="150" height="130" />
+              <img src="images/6.jpg" width="150" height="130" />
+              <img src="images/7.jpg" width="150" height="130" />
+              <img src="images/8.jpg" width="150" height="130" />
+              <img src="images/9.jpg" width="150" height="130" />
+              <img src="images/10.jpg" width="150" height="130" />
+              <img src="images/11.jpg" width="150" height="130" />
+              <img src="images/12.jpg" width="150" height="130" />
+              <img src="images/13.jpg" width="150" height="130" />
+              <img src="images/14.jpg" width="150" height="130" />
+              <img src="images/15.jpg" width="150" height="130" />
+              <img src="images/16.jpg" width="150" height="130" />
+              <img src="images/17.jpg" width="150" height="130" />
+            </div>   
+        </div>
+    </div>
+    
+    
+    
+    
+    	<div class="gallery3">
+    
+                <div class="window3">
+            <div id="thumbs3">
+              <img src="images/1.jpg" width="150" height="130" />
+              <img src="images/2.jpg" width="150" height="130" />
+              <img src="images/3.jpg" width="150" height="130" />
+              <img src="images/4.jpg" width="150" height="130" />
+              <img src="images/5.jpg" width="150" height="130" />
+              <img src="images/6.jpg" width="150" height="130" />
+              <img src="images/7.jpg" width="150" height="130" />
+              <img src="images/8.jpg" width="150" height="130" />
+              <img src="images/9.jpg" width="150" height="130" />
+              <img src="images/10.jpg" width="150" height="130" />
+              <img src="images/11.jpg" width="150" height="130" />
+              <img src="images/12.jpg" width="150" height="130" />
+              <img src="images/13.jpg" width="150" height="130" />
+              <img src="images/14.jpg" width="150" height="130" />
+              <img src="images/15.jpg" width="150" height="130" />
+              <img src="images/16.jpg" width="150" height="130" />
+              <img src="images/17.jpg" width="150" height="130" />
+            </div>   
+        </div>
+    
+
+<script>
+//////////-----------МОЙ! ВАРИАНТ-------------//////////
+let prev0 = document.querySelector('#prev0');
+let next0 = document.querySelector('#next0');
+let parent0 = document.querySelector('#thumbs0');
+let imgs0 = document.querySelectorAll('#thumbs0>img');
+
+prev0.addEventListener('click', () => {
+  parent0.prepend(imgs0[imgs0.length-1]);
+  imgs0 = document.querySelectorAll('#thumbs0>img');
+  imgs0[imgs0.length-1].remove();
+})
+
+next0.addEventListener('click', () => {
+  parent0.append(imgs0[0]);
+  imgs0 = document.querySelectorAll('#thumbs0>img');
+  imgs0[0].remove();
+})
+//////////-----------1 ВАРИАНТ-------------//////////
+
+let pics=['images/1.jpg', 'images/2.jpg', 'images/3.jpg', 'images/4.jpg', 'images/5.jpg', 'images/6.jpg', 'images/7.jpg', 'images/8.jpg', 'images/9.jpg', 'images/10.jpg', 'images/11.jpg', 'images/12.jpg', 'images/13.jpg', 'images/14.jpg', 'images/15.jpg', 'images/16.jpg', 'images/17.jpg'];
+
+let prev = document.querySelector('#prev');
+let next = document.querySelector('#next');
+let imgs = document.querySelectorAll('#thumbs>img');
+let shift = 0;
+let pos;
+next.addEventListener('click', () => {
+  shift++;
+  for(let i = 0; i < imgs.length; i++){
+    pos = (pics.length+i+shift)%pics.length;
+    imgs[i].setAttribute('src', pics[pos]);
+  }
+})
+
+prev.addEventListener('click', () => {
+  shift--;
+  shift = shift%pics.length;
+  for(let i = 0; i < imgs.length; i++){
+    pos = (pics.length+shift+i)%pics.length;
+    imgs[i].setAttribute('src', pics[pos]);
+  }
+})
+
+//////////-----------2 ВАРИАНТ-------------//////////
+
+let prev2 = document.querySelector('#prev2');
+let next2 = document.querySelector('#next2');
+let parent = document.querySelector('#thumbs2');
+let win2 = document.querySelector('.window');
+let len = document.querySelectorAll('#thumbs2>img').length;
+let width = document.querySelector('#thumbs2>img').getBoundingClientRect().width;
+width += parseInt(window.getComputedStyle(document.querySelector('#thumbs2>img')).marginLeft)*2;
+let shift2 = 0;
+let wThumbs2 = width*len;
+let wWin2 = win2.getBoundingClientRect().width;
+let amountImg = parseInt(wWin2/width);
+let imgs2 = document.querySelectorAll('#thumbs2>img');
+let shift3 = 0;
+
+
+for(let i = 0; i < amountImg; i++){
+  parent.append(imgs2[i].cloneNode());
+}
+
+next2.addEventListener('click', () => {
+  shift2--;
+  if(shift2*width == -wThumbs2) shift2 = 0;
+  parent.style.left = shift2*width + 'px';
+  console.log(shift2)
+})
+
+prev2.addEventListener('click', () => {
+  shift2++;
+  if(shift2 == 1) shift2 = (-wThumbs2 + width)/width;
+  parent.style.left = shift2*width + 'px';
+  console.log(shift2)
+})
+
+
+//////////-----------3 ВАРИАНТ-------------//////////
+let gallery3 = document.querySelector('.gallery3')
+let parent3 = document.querySelector('#thumbs3');
+let len3 = document.querySelectorAll('#thumbs3>img').length;
+let width3 = document.querySelector('#thumbs3>img').getBoundingClientRect().width;
+let wThumbs3 = width*len;
+let win3 = document.querySelector('.window3');
+let wWin3 = win3.getBoundingClientRect().width;
+let imgs3 = document.querySelectorAll('#thumbs3>img');
+let amountImg3 = parseInt(wWin3/width3);
+
+
+
+for(let i = 0; i < amountImg3; i++){
+  parent3.append(imgs3[i].cloneNode());
+}
+
+gallery3.addEventListener('wheel', (e) => {
+  if(e.deltaY > 0){
+    shift3 -= 30;
+    if(shift3*width3 == -wThumbs3) shift3 = 0;
+    parent3.style.left = shift3 + 'px';
+  }else{
+    shift3 += 30;
+    if(shift3 <= 0) shift3 = -wThumbs3 + width3;
+    parent3.style.left = shift3 + 'px';
+  }
+})
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

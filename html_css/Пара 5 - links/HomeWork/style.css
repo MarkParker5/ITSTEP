@@ -1,0 +1,76 @@
+.container{
+	background: url(img/bg3.jpg);
+	margin: 0;
+}
+body{
+	margin: 0;
+}
+h1{
+	background-color: yellow;
+	color: orange;
+	text-align: center;
+}
+img{
+	float: left;
+	margin: 10px;
+	margin-top: 0;
+}
+a{
+	color: purple;
+	text-decoration: none;
+}
+.more{
+	text-align: right;
+}
+.mir h2, .mir a{
+	color: purple;
+}
+.mir p{
+	color: violet;
+}
+.bob h2, .bob a{
+	color: #075E00;
+}
+.bob p{
+	color: green;	
+}
+.kitt h2{
+	color: blue;
+}
+.kitt p, .kitt a{
+	color: #3D8BFF;	
+}
+.ninja h2, .ninja a{
+	color: #A20000;
+}
+.ninja p{
+	color: red;	
+}
+.mir a{
+	background-color: violet
+}
+.bob a{
+	background-color: green
+}
+.kitt a{
+	background-color: blue
+}
+.ninja a{
+	background-color: yellow
+}
+.h_mir{
+	background-color: violet;
+	color: white;
+}
+.h_bob{
+	background-color: #075E00;
+	color: white;
+}
+.h_kitt{
+	background-color: blue;
+	color: white;
+}
+.h_ninja{
+	background-color: #A20000;
+	color: white;
+}

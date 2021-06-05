@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+<form name="test">
+<h1>Моря:</h1>
+	<input type="checkbox" name="check[]" value="красное" class="answer" />
+    <label for="check1">красное</label><br />
+    
+	<input type="checkbox" name="check[]" value="черное" class="answer" />
+    <label for="check2">черное</label><br />
+    
+	<input type="checkbox" name="check[]" value="белое" class="answer"/>
+    <label for="check3">белое</label><br />
+    
+    <input type="button" value="click me"/>
+</form>
+
+
+<script>
+
+let form = document.forms['test'];
+let inputs = form.elements['check[]'];
+let btn = document.querySelector('[type = "button"]');
+let count;
+
+let out = document.createElement('div');
+document.body.append(out);
+
+btn.addEventListener('click', () => {
+	count = 0;
+	for(let i = 0; i < inputs.length; i++){
+		inputs[i].click();
+		if(inputs[i].checked){
+			count++;
+		}
+	}
+	out.innerHTML = count;
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

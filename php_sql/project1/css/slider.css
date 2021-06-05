@@ -1,0 +1,38 @@
+.sliders{
+  text-align: center;
+}
+.window{
+  width: 900px; 
+  height: 150px; 
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  position: relative;
+}
+.thumbs{
+  width: 5100px;
+  height: 100%;
+  position: absolute;
+  top: 0; 
+  left: 0;
+}
+.thumbs img{
+  width: 150px;
+  height: 150px;
+	float: left;
+}
+#big{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000c;
+  z-index: 999;
+  text-align: center;
+}
+#big img{
+  margin-top: 5%;
+  height: 70%;
+}

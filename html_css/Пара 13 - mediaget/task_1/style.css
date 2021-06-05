@@ -1,0 +1,101 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: url(img/templatemo_body.jpg);
+}
+.container{
+	height: 80vh;
+	width: 90vw;
+	display: grid;
+	grid: 	"header header header" 1fr
+			"aside adress adress" 1fr
+			"aside gallery gallery" 1fr
+			"aside gallery gallery" 1fr
+			"aside form form " 1fr
+			"footer footer footer" 1fr
+			/2fr 1fr 1fr;
+}
+header{
+	grid-area: header;
+	text-align: center;
+	color: white;
+}
+aside{
+	grid-area: aside;
+}
+aside ul{
+	display: grid;
+	grid-template: 1fr 1fr 1fr 1fr / 1fr; 
+}
+aside li{
+	padding: 20px;
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+aside li:nth-child(1){
+	background: #C135CE;
+}
+aside li:nth-child(2){
+	background: #82C180;
+}
+aside li:nth-child(3){
+	background: #D9937E;
+}
+aside li:nth-child(4){
+	background: #8F8F8F;
+}
+adress{
+	grid-area: adress;
+	background: #462A5B;
+	padding: 20px;
+}
+adress p, adress h3{
+	color: white
+}
+.gallery{
+	grid-area: gallery;
+}
+form{
+	grid-area: form;
+	padding: 10px;
+	color: white;
+}
+footer{
+	grid-area: footer;
+	text-align: center;
+	color: white;
+}
+ul{
+	list-style: none;
+}
+aside img, adress img{
+	float: left;
+	margin-right: 10px; 
+}
+.gallery{
+	display: grid;
+	grid-template: 1fr 1fr/ 1fr 1fr;
+}
+.gallery img{
+	height: 100%;
+}
+@media screen and (max-width: 768px){
+	.container{
+		height: auto;
+		width: 100vw;
+		grid: 	"header" auto
+				"aside" auto
+				"adress" auto
+				"gallery" auto
+				"form" auto
+				"footer" auto
+				/100%;
+	}
+	.gallery:nth-child(1), .gallery:nth-child(2), .gallery:nth-child(3){
+		display: none;
+	}
+}

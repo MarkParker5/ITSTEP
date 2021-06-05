@@ -1,0 +1,28 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+div{
+	width: 100%;
+	height: 100%;
+	background-repeat-y: no-repeat;
+}
+#room{
+	width: 100%;
+	height: 100vh;
+	background:	url(img/sofa.png), 
+				url(img/teto.jpg);
+	background-repeat-y: no-repeat;
+}
+#radio{
+	background:	url(img/radio.png);
+	background-repeat-y: no-repeat;
+}
+#second{
+	background:	url(img/mesa.png);
+	background-repeat-y: no-repeat;
+}
+#col{
+	background: url(img/colunas.png);
+	background-repeat-y: no-repeat;
+}

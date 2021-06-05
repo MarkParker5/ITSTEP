@@ -1,0 +1,56 @@
+сниппет
+http://saney.ru/tools/google-snippets-generator.html
+
+schema.org
+https://yandex.ru/support/webmaster/schema-org/what-is-schema-org.xml?lang=uk
+
+<a href="http://example.ru" rel="nofollow">анкор</a>
+
+
+<link rel="canonical" href="http://site.com/canonical-link.html"/> 
+устранения дублей
+
+запрет индексирования
+<noindex>Это предложение не видно Яндексу</noindex>
+
+уникальный контент (актуальный) 
+http://www.content-watch.ru/text/
+
+проверка сайта
+https://a.pr-cy.ru
+
+подбор ключевых слов
+https://wordstat.yandex.ua/
+https://seojus.ru/seo-tools/17-service-selection-key-words#i-6
+https://online.seranking.com/admin.keysuggestion.html
+
+генерировать карту сайта
+https://www.xml-sitemaps.com/
+
+сайт для создания архитектуры
+bubbl.us
+
+учебники
+
+уроки seo http://bigmon.net/seo/seo_lessons/
+
+http://imarketing.com.ua/stati
+
+https://webformyself.com/?s=%D0%A1%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D0%B5+SEO+%D0%BD%D0%B0+2016
+
+!!! http://ktonanovenkogo.ru/faq-vopros-otvet-po-prodvizheniyu-i-raskrutke-sajta#48
+
+http://ktonanovenkogo.ru/faq
+
+http://seoprofy.ua/blog/optimizaciya-sajtov
+
+http://webcomme.ru/seo/reference-weight.html
+
+http://webmastermaksim.ru/wordpress/seo-wordpress-poshagovaya-instrukciya-po-optimizacii.html
+
+http://webmastermaksim.ru/nachinayushhemu-vebmasteru/kak-pravilno-pisat-stati-ili-seo-optimizaciya-statej-gramotnyj-podbor-klyuchevyx-slov-dlya-sajta.html
+
+http://ubium.ru/materials/all/all/p4
+
+
+

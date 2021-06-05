@@ -1,0 +1,8 @@
+https://learn.javascript.ru/intro
+https://learn.javascript.ru/hello-world
+https://learn.javascript.ru/structure
+https://learn.javascript.ru/strict-mode
+https://learn.javascript.ru/variables
+https://learn.javascript.ru/types
+https://learn.javascript.ru/type-conversions
+https://learn.javascript.ru/operators

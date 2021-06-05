@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Fastfood</title>
+
+
+	<style>
+		h3{
+			text-align: center;
+		}
+		form{
+			width: 30%;
+			min-width: 300px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		fieldset{
+			margin-top: 5vh;
+		}
+		legend{
+			text-transform: uppercase;
+		}
+		img{
+			width:50px;
+			height:50px;
+		}
+		input[type='button']{
+			width:100%;
+			margin-top: 5vh;
+			box-sizing: border-box;
+			padding: 3vh;
+		}
+	</style>
+
+
+</head>
+<body>
+
+
+
+<form name="burger">
+<fieldset>
+	<legend>Select size</legend>
+	<label>
+		<img src="img/small.jpg" alt="" />
+		<input type="radio" name="sizeBurger" value="small"/>
+	</label>
+	<label>
+		<img src="img/large.jpg" alt="" />
+		<input type="radio" name="sizeBurger" value="large"/>
+	</label>
+</fieldset>
+<fieldset>
+	<legend>Select stuffing</legend>
+<label>
+	<img src="img/cheese.jpg" alt="" />
+	<input type="checkbox" name="cheese" value="cheese"/>
+</label>
+<label>
+	<img src="img/salad.jpg" alt="" />
+	<input type="checkbox" name="salad" value="salad"/>
+</label>
+<label>
+	<img src="img/potato.jpg" alt="" />
+	<input type="checkbox" name="potato" value="potato"/>
+</label>
+</fieldset>
+<fieldset>
+	<legend>Select topping</legend>
+<label>
+	<img src="img/mayonez.jpg" alt="" />
+	<input type="checkbox" name="mayonez" value="mayonez"/>
+</label>
+<label>
+	<img src="img/spice.jpg" alt="" />
+	<input type="checkbox" name="spice" value="spice"/>
+</label>
+</fieldset>
+<input type="button" value="ORDER" name="order">
+</form>
+<h3 id="result"></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+let elems = document.forms.burger.elements;
+let sizeBurger = elems['sizeBurger'];
+let cheese = elems['cheese'];
+let salad = elems['salad'];
+let potato = elems['potato'];
+let mayonez = elems['mayonez'];
+let spice = elems['spice'];
+let order = elems['order'];
+let result = document.querySelector('#result');
+order.disabled = true;
+
+class Menu{
+	constructor(size, stuffing){
+		this.size = size;			//string
+		this.stuffing = stuffing;	//array
+		this.spec = []; 			//array
+	};
+	static get SizePrice(){return {'small':50, 'large':100}};
+	static get SizeEnergy(){return {'small':20, 'large':40}};
+	static get StuffPrice(){return {
+							'cheese':2, 'potato':4, 'salad':5}};
+	static get StuffEnergy(){return {
+							'cheese':20, 'potato':25, 'salad':5}};
+	static get SpecPrice(){return {'mayonez':3, 'spice':1}};
+	static get SpecEnergy(){return {'mayonez':25, 'spice':0}};
+
+	static create(){							//for test
+		return new Menu('large', ['potato']);
+	};
+	set specs(spec){this.spec = spec};
+	get specs(){return this.spec};
+	price(){
+		let money = Menu.SizePrice[this.size];
+		for(let i in this.stuffing)
+			money += Menu.StuffPrice[this.stuffing[i]];
+		for(let i in this.spec)
+			money += Menu.SpecPrice[this.spec[i]];
+		return money;
+	};
+	energy(){
+		let kkal = Menu.SizeEnergy[this.size];
+		for(let i in this.stuffing)
+			kkal += Menu.StuffEnergy[this.stuffing[i]];
+		for(let i in this.spec)
+			kkal += Menu.SpecEnergy[this.spec[i]];
+		return kkal;
+	};
+};
+
+
+
+order.addEventListener('click', () => {
+	let stuffingAll = [];
+	let spec = [];
+	if(cheese.checked) stuffingAll.push('cheese');
+	if(salad.checked) stuffingAll.push('salad');
+	if(potato.checked) stuffingAll.push('potato');
+	let meal = new Menu(sizeBurger.value, stuffingAll);
+	if(mayonez.checked) spec.push('mayonez');
+	if(spice.checked) spec.push('spice');
+	meal.specs = spec;
+	result.innerHTML = `Price:\t${meal.price()} $<br>Energy:\t${meal.energy()} kkal`;
+	console.log(meal);
+})
+
+for(i in elems) elems[i].addEventListener('change', () => {
+	if(!cheese.checked && !salad.checked && !potato.checked ||        !sizeBurger.value){
+		result.innerHTML = "";
+		order.disabled = true;
+	}else order.disabled = false;
+});
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

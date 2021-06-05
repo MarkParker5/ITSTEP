@@ -1,0 +1,55 @@
+.flex-container{
+	width: 300px;
+	height: 50vh;
+	background-color: red; 
+	display: flex;
+	/*flex-flow:
+	flex-direction: row; //row, row-reverse, column, column-reverse
+	flex-wrap: wrap; //nowrap, wrap, wrap-reverse */
+	/*flex-flow: flex-direction flex-wrap*/
+	flex-flow: row nowrap;
+	justify-content: flex-start; /* flex-start, flex-end, center, space-between, space-around, space-evenly  */
+	align-content: flex-start; /* stretch, flex-start, flex-end center, space-between, space-around, space-evenly*/ 
+}
+.flex-child{
+	height: 10vh;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 100px;
+}
+/*flex: flex-grow flex-shrink flex-basis*/
+/*flex: 2 0 100px*/
+.color1{
+	background-color: #E0E0E0;
+	flex-grow: 1;
+	flex-shrink: 0;
+	align-self: center;
+}
+.color2{
+	background-color: #CDCDCD;
+	flex-shrink: 4;
+	flex-grow: 0;
+	order: -1;
+}
+.color3{
+	background-color: #959595;
+}
+.color4{
+	background-color: #7D7D7D;
+}
+.color5{
+	background-color: #5E5E5E;
+	color: white;
+}
+.color6{
+	background-color: #454545;
+	color: white;
+}
+.color7{
+	background-color: #373737;
+	color: white;
+}
+.color8{
+	background-color: #101010;
+	color: white;
+}

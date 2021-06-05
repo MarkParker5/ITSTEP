@@ -1,0 +1,28 @@
+nav{
+	background: url(img/menu-bg.jpg) no-repeat;
+	width: 100%;
+	height: 210px;
+}
+li{
+	display: inline-block;
+}
+a{
+	display: block;
+	height: 50px;
+	width: 200px;
+	margin: 0 20px;
+	background-size: cover;
+	margin-top: 50px;
+}
+.rss{
+	background: url(img/rss.gif) no-repeat;
+}
+.home{
+	background: url(img/home.gif) no-repeat;
+}
+.about{
+	background: url(img/about.gif) no-repeat;
+}
+.rss:hover, .home:hover, .about:hover{
+	background-position: 0 -51px;
+}

@@ -1,0 +1,15 @@
+/*input[name="one"]{
+	display: none;
+}*/
+ul{
+	overflow: hidden;
+	height: 0;
+	transition: height 1s;
+}
+ol, ul{
+	list-style: none;
+}
+input:checked ul{
+	height: auto;
+	background-color: red;
+}

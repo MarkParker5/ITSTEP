@@ -1,0 +1,61 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+div{
+	background-color: #555;
+	color: white;
+	width: 400px;
+	left: 0;
+}
+input{
+	display: none;
+}
+ul{
+	overflow: hidden;
+	height: 0;
+	transition: height 1s;
+	margin-bottom: -15px;
+	color: #999;
+}
+ol, ul{
+	list-style: none;
+}
+img{
+	float: left;
+	width: 20px;
+	margin: 0 10px;
+}
+a{
+	text-decoration: none;
+	color: white;
+	display: block;
+	height: 50px;
+	background: linear-gradient(0deg, #444, #666);
+	width: 100%;
+	padding-top: 15px;
+	box-sizing: border-box;
+}
+a:focus~ul{
+	height: auto;
+	background-color: white;
+	color: #333;
+}
+a:focus{
+	background: linear-gradient(0deg, #0068D3, #007EFF);
+}
+ul li:nth-child(1){
+	margin-top: 10px;
+}
+span{
+	padding: 3px 10px;
+	float: right;
+	margin-right: 20px;
+	border-radius: 12px;
+}
+.num{
+	background-color: #333;
+}
+.num2{
+	border: 1px solid #999;
+}

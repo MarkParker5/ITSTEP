@@ -1,0 +1,57 @@
+#main *{
+	margin: 0;
+	padding: 0;
+}
+#main ul{
+	list-style: none;
+	text-align: center;
+	/*overflow: hidden;*/
+	background: #999;
+}
+#main ul::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+#main ul li{
+	/*display: inline-block;*/
+	float: left;
+}
+#main ul li a{
+	color: #555;
+	text-decoration: none;
+	display: block;
+	width: 90px;
+	height: 100px;
+	/*line-height: 180px;*/
+	padding-top: 80px;
+	box-sizing: border-box;
+}
+#main .main{
+	background: url(img/3_3.png) no-repeat;
+}
+#main .main:hover, #main .main.active{
+	background: url(img/3.png) no-repeat;
+	color: green;
+}
+#main .map{
+	background: url(img/1_1.png) no-repeat;
+}
+#main .map:hover, #main .map.active{
+	background: url(img/1.png) no-repeat;
+	color: green;
+}
+#main .products{
+	background: url(img/4_4.png) no-repeat;
+}
+#main .products:hover, #main .products.active{
+	background: url(img/4.png) no-repeat;
+	color: green;
+}
+#main .buy{
+	background: url(img/2_2.png) no-repeat;
+}
+#main .buy:hover, #main .buy.active{
+	background: url(img/2.png) no-repeat;
+	color: green;
+}

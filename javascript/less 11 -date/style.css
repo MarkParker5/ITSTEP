@@ -1,0 +1,25 @@
+/*body{
+	width: 90vw;
+	height: 60vh;
+}
+
+body>div{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background: red;
+	margin:auto;
+	position: absolute;
+}*/
+
+#lug{
+	width: 100%;
+	height: 50vh;
+	background: url(img/lug.png) no-repeat;
+}
+#lug>*{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+}
+

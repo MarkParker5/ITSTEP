@@ -1,0 +1,42 @@
+body, *{
+	margin: 0;
+	padding: 0;
+}
+/*
+Position:
+	(left/right, top/bottom);
+	static   - отменить позиционирорвание;
+	relative - перемещение относительно начальной позиции;
+	absolute - позиционирование относительно родителя, имеющего {position: relative;};
+	fixed    - работает как position: absolute, но не прокручивается;
+	sticky   - прилепает к границе, если родитель прокручивается;
+*/
+section{
+	margin: 50px;
+	position: relative;
+}
+.ded{
+	width: 256px;
+	height: 256px;
+	border: 1px solid lightblue;
+}
+.moroz1{
+	background: url(img/santa1.gif);
+	/*position: relative;*/
+	position: sticky;
+	left: 40%;
+	top: 0;
+}
+.moroz2{
+	background: url(img/santa2.gif);
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.moroz3{
+	background: url(img/santa3.gif);
+	position: fixed;
+}
+.moroz1:hover, .moroz2:hover, .moroz3:hover{
+	background-position: 0 -256px;
+}

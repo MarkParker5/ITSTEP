@@ -1,0 +1,21 @@
+body{
+	text-align: center;
+}
+div{
+	margin: 15px auto;
+}
+label{
+	margin-right: 10px;
+}
+.container{
+	max-width: 500px;
+}
+.necessarily::after{
+	content: "*";
+	color: red;
+}
+label>sub{
+	text-align: right;
+	float: right;
+	width: 220px;
+}

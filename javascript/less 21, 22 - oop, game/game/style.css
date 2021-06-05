@@ -1,0 +1,27 @@
+body{
+	background: url(img/0-start.jpg) no-repeat;
+	background-size: contain;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+img{
+	position: absolute;
+	left: -150px;
+	top: -150px;
+}
+#start{
+	width: 260px;
+	height: 153px;
+	background: url('img/play.png');
+	margin: auto;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+p{
+	color: #fff;
+	font-size: 1.4em;
+	font-family: serif;
+	display: none;
+}

@@ -1,0 +1,40 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#field{
+	width: 500px;
+	height: 80vh;
+	background: #222;
+	margin: auto;
+	position: relative;
+}
+#ball{
+	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+	background: linear-gradient(0deg, #999, #bbb);
+	position: absolute;
+}
+#stick{
+	width: 100px;
+	height: 15px;
+	background: linear-gradient(0deg, #999, #555);
+	position: absolute;
+	bottom: 80px;
+	border-radius: 10px;
+}
+#score, #health, #lvl{
+	font-family: sans-serif;
+	font-size: 1.5em;
+}
+.brick{
+	width: 50px;
+	height: 15px;
+	background: red;
+	border: 1px solid #777;
+	border-radius: 5px;
+	box-sizing: border-box;
+	margin: 0;
+	position: absolute;
+}

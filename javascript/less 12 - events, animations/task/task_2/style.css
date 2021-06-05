@@ -1,0 +1,6 @@
+div{
+	background: url(logo.png);
+	width: 200px;
+	height: 200px;
+	background-size: contain;
+}

@@ -1,0 +1,27 @@
+html, body{
+	width: ;
+	min-height: 100%;
+	height: auto;
+	overflow: scroll-x;
+}
+button{
+	width: 100px;
+	height: 50px;
+	padding: 10px;
+	margin: 10px;
+	background: linear-gradient(0deg, #333, #666);
+	color: white;
+	font-size: 1.2em;
+	border-radius: 10px;
+	opacity: 0.9;
+	outline: none;
+	border: none;
+	right: 20px;
+	bottom: 10px;
+}
+button:hover{
+	opacity: 1;
+}
+button:active{
+	background: linear-gradient(180deg, #333, #666);
+}

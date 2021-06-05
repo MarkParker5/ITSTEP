@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title></title>
+<meta charset="utf-8"/>
+</head>
+<body>
+
+<form name="f1">
+  <p>Первый вариант: Enter в текстовом поле <input name="t1" type="text" value="Текст"></p>
+  <p>Второй вариант: Нажать на "Отправить": <input name="s1" type="submit" value="Отправить"></p>
+</form>
+<br><br/><br/>
+
+<form name="f2">
+ <p><input name="t2" type="text" size="30" value="Нажми здесь Enter"></p>
+ <p><input name="s2" type="submit" value="Submit" id="sub"></p>
+</form>
+<br><br/><br/>
+
+<form name="f3">
+    <label>Текст: <input type="text" name="text_1" value="1" >
+    </label>
+    <input type="button" value=" Ok " >
+</form>
+<div id="res" style="width:100px; height:100px; border:1"></div>
+<br><br/><br/>
+
+<script>
+//---------------------FORM 1-----------------------
+let f1 = document.forms['f1'];
+
+f1.addEventListener('submit', (e) => {
+	e.preventDefault()
+	alert(e.type)
+})
+
+//---------------------FORM 2-----------------------
+let f2 = document.forms.f2;
+let sub1 = document.getElementById('sub');
+
+sub1.addEventListener('click', (e) => {
+	alert(e.type);
+})
+
+//---------------------FORM 3-----------------------
+let f3 = document.forms.f3;
+let res = document.getElementById('res');
+let text1 = f3.elements['text_1'];
+
+//Events:
+//		change, input, cut, copy, paste
+//		focus, blur
+//		keydown, keypress, keyup,
+//Methods:
+//		.focus(), .enter(), .select()
+
+text1.addEventListener('keydown', (e) => {
+	if(e.keycode==41) alert(41)
+	console.log(e.keyCode)
+	res.innerHTML = text1.value
+})
+
+text1.focus()
+text1.select()
+
+
+
+
+
+
+</script>
+</body>
+</html>

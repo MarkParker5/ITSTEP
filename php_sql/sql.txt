@@ -1,0 +1,154 @@
+SQL - Structured Query Language
+
+
+
+                        1 book
+
+CREATE TABLE users(
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	email VARCHAR(32) NOT NULL UNIQUE,
+    age INT DEFAULT 20,
+    gender ENUM('m', 'w') NULL,
+    created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE products ( id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                        name VARCHAR(100) NOT NULL ,
+                        price FLOAT NULL ,
+                        color ENUM('r','g','b') NOT NULL );
+
+
+
+
+INSERT INTO users VALUES(1, 'mark1@gmail.com', 33, 'm', '2020-04-22');
+
+INSERT INTO users(email, age) VALUES('mark2@gmail.com', 35);
+
+INSERT INTO users (email, age) VALUES ('mark3@gmail.com', 21), 
+									  ('mark4@gmail.com', 195),
+                                      ('mark5@gmail.com', 15);
+
+
+
+DELETE FROM users WHERE id = 2;
+
+DELETE FROM users WHERE age = 195 OR gender = 'm';
+
+
+
+UPDATE users SET email='markX@gmail.com' WHERE id = 1;
+
+UPDATE users SET age=age+1;
+
+
+
+
+SELECT * FROM books WHERE price > 300;
+
+SELECT name, dateizd, category FROM books WHERE price > 300;
+
+SELECT name, price, category FROM books WHERE dateizd IS NULL;
+
+SELECT name, dateizd, price FROM books WHERE dateizd IS NOT NULL AND category = 'Учебники';
+
+SELECT name, category, dateizd, price 
+FROM books 
+WHERE price BETWEEN 20 AND 30;
+
+SELECT name, category, dateizd, price 
+FROM books 
+WHERE pressrun IN (2000, 3000, 5000);
+
+SELECT name, category, dateizd, price 
+FROM books 
+WHERE name NOT LIKE '%html%';
+
+			
+
+
+SELECT DISTINCT category, themes				 // DISTINCT delete repeat
+FROM books
+WHERE category = 'Учебники'
+ORDER BY themes, category DESC					// DESK = reverse ASK
+LIMIT 0, 10;
+
+
+SELECT name
+FROM books
+WHERE category = 'Учебники'
+ORDER BY price
+LIMIT 0, 10
+
+
+
+MIN, MAX, AVG, SUM, COUNT						//in SELECT
+
+COUNT(*) - count of rows
+COUNT(column) - count of rows != null
+
+SELECT MIN(price) as min, MAX(price) as max, SUM(price) as sum, COUNT(price) as count, AVG(price) as avg
+FROM books
+WHERE dateizd IS NOT NULL
+
+SELECT COUNT(*) as total, COUNT(dateizd) as published 
+FROM books
+
+
+
+При использовании GROUP BY функции(MIN, MAX, AVG e.t.c) применяются к каждой группе
+
+SELECT category, AVG(price) as avg
+FROM books
+GROUP BY category
+
+
+
+SELECT izd, COUNT(dateizd) as count
+FROM books
+WHERE dateizd IS NOT NULL
+GROUP BY izd
+ORDER BY count
+
+SELECT izd, COUNT(dateizd) as count
+FROM books
+GROUP BY izd
+HAVING count > 0
+ORDER BY count
+
+
+
+
+
+
+                        multi books
+create table products(
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(32) NOT NULL,
+    price INT UNSIGNED NOT NULL,
+    category_id INT UNSIGNED,
+    manufacture_id INT UNSIGNED
+);
+
+create table manufactures(
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(32) NOT NULL
+);
+
+
+alter table products 
+add foreign key (category_id) 
+references categories(id) 
+on delete set null 
+on update cascade;
+
+
+select products.name as name, categories.name as category
+from products inner join categories on products.category_id = categories.id;
+
+select products.name as name, products.price as price, categories.name as category, manufactures.name as mf
+from products inner join categories on products.category_id = categories.id 
+                inner join manufactures on products.manufacture_id = manufactures.id;
+
+
+select products.name as name, categories.name as category
+from products left outer join categories on products.category_id = categories.id;

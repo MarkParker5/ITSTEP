@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		input[type="text"]{
+			outline: none;
+			width:100px;
+			-webkit-transition: all 1s;
+			-moz-transition: all 1s;
+			-ms-transition: all 1s;
+			-o-transition: all 1s;
+			transition: all 1s;
+		}
+		input[type="text"]:focus{
+			border: 2px #000 solid;
+			width:200px;
+		}
+	</style>
+</head>
+<body>
+	<form id="test">
+		<input type="text" name="userName" id="userName" placeholder="Ваше имя" disabled="disabled"><br>
+		<input type="checkbox" name="agree" id="agree">Согласен<br>
+		<input type="button" value="click me" id="button">
+	</form>
+
+
+<script>
+
+let form = document.forms['test'];
+let inputs = form.elements;
+let btn = document.querySelector('[type = "button"]');
+let disable;
+
+let nums = [];
+for(let i= 0; i < 10; i++) nums[i] = i;
+
+btn.disabled = true;
+
+inputs['agree'].addEventListener('change', () => {
+	if(inputs['agree'].checked) inputs['userName'].disabled = false;
+	else inputs['userName'].disabled = true;
+})
+
+inputs['userName'].addEventListener('keyup', (e) => {
+	name = inputs['userName'].value;
+	for(let i = 0; i < name.length; i++){
+		if(name[i] in nums && name.length > 5 && name.length < 11) disable = false;
+		else{disable = true; break}
+	}
+	btn.disabled = disable;
+})
+
+
+
+
+
+
+
+
+
+	
+</script>
+</body>
+</html>

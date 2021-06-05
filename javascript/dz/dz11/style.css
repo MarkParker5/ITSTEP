@@ -1,0 +1,41 @@
+body>div{
+	margin: 5px; 
+	padding: 20px; 
+	border: 1px solid black; 
+	width: 300px; 
+	height: 410px;
+	text-align: center;
+}
+body>div>p{
+	margin-top: 40px;
+	font-size: 1.2em
+}
+body>div>em{
+	font-weight: 800;
+}
+.parent{
+	width: 100%; 
+	height: 300px; 
+	background: url(img/box.jpg) no-repeat center; 
+	background-size: cover; 
+	text-align: center; 
+	box-sizing: border-box;
+}
+.parent>div{
+	width: 100%; 
+	height: 100%; 
+	background: #5D6C8F89; 
+	padding: 120px 50px;
+	box-sizing: border-box;
+}
+.btn{
+	color: #fff; 
+	border: 1px solid #fff; 
+	padding: 10px 5px; 
+	width: 100%;
+	margin-top: 10px;
+}
+.btn:hover{
+	color: #000;
+	background: #fff;
+}

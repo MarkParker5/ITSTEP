@@ -1,0 +1,45 @@
+body{
+	margin: 0;
+	/*background: url(img/pic2.png) repeat-y left;*/
+	font-family: 'Oswald', cursive;
+}
+.container{
+	width: 70%;
+	margin: 0 auto;
+	margin-top: 65px;
+	/*background: url(img/pic1.jpg) no-repeat right;*/
+}
+
+.bg h2{
+	text-align: center;
+	color: white;
+	font-size: 300%;
+	text-shadow: 4px 4px 3px black;
+}
+.bg{
+	background: url(img/bg.jpg) fixed;
+	padding: 80px;
+}
+p{
+	font-weight: 300;
+}
+
+nav{
+	margin: 0 auto;
+	position: fixed;
+	top: 0;
+	background-color: #333;
+	text-align: center;
+	width: 100%;
+}
+nav a{
+	color: white;
+	text-decoration: none;
+	display: inline-block;
+	padding: 20px;
+	width: 20%;
+	transition: 0.2s;
+}
+nav a:hover, #active{
+	background: #777;
+}

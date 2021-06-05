@@ -1,0 +1,17 @@
+#cont{
+	width: 1000px;
+	margin: auto;
+}
+#head{
+	width: 1000px;
+	height: 20vh;
+	background: url(1.png), url(2.png), url(3.png), url(4.png);
+	background-repeat-y: no-repeat;
+	position: fixed;
+	top: 0;
+}
+#txt{
+	width: 100%;
+	margin: auto;
+	margin-top: 20vh;
+}

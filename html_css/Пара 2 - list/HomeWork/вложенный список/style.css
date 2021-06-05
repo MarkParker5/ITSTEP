@@ -1,0 +1,22 @@
+.text-orange{
+	color: #FF8400;
+	list-style-image: url(img/1.png);
+}
+.text-blue{
+	color: #0C00FE;
+	list-style-image: url(img/3.png);
+}
+.text-green{
+	color: #00B308;
+	list-style-image: url(img/2.png);
+}
+.text-red{
+	color: #FF0000;
+}
+.list-abc{
+	list-style: lower-alpha;
+	color: #9B0F00;
+}
+.list-greek{
+	list-style-type: upper-roman;
+}

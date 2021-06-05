@@ -1,0 +1,68 @@
+<!DOCTYPE htm>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+<form name="test">
+<h1>Цвет фона:</h1>
+	<input type="radio" name="rad" id="rad1" value="#ff0000" />
+    <label for="rad1">красный</label><br />
+    
+	<input type="radio" name="rad" id="rad2" value="#0000ff" />
+    <label for="rad2">синий</label><br />
+    
+	<input type="radio" name="rad" id="rad3"  value="#00ff00"/>
+    <label for="rad3">зеленый</label><br />
+    
+    
+ <h1>Цвет текста:</h1>
+	<input type="radio" name="text" id="text1" value="#ff0000" />
+    <label for="text1">красный</label><br />
+    
+	<input type="radio" name="text" id="text2" value="#0000ff" />
+    <label for="text2">синий</label><br />
+    
+	<input type="radio" name="text" id="text3"  value="#00ff00"/>
+    <label for="text3">зеленый</label><br />
+    
+       
+    <input type="button" value="click me" />
+</form>
+
+
+<script>
+
+let rad = document.querySelectorAll('[name="rad"]');
+let text = document.querySelectorAll('[name="text"]');
+let btn = document.querySelector('[value="click me"]');
+let body = document.body;
+
+
+btn.addEventListener('click', () => {
+    for(let i = 0; i < rad.length; i++){
+        if(rad[i].checked){
+            body.style.backgroundColor = rad[i].value;
+        }
+    }
+    for(let i = 0; i < text.length; i++){
+        if(text[i].checked){
+            body.style.color = text[i].value;
+        }
+    }
+})
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

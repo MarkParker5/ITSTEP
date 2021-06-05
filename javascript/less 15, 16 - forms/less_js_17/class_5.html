@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title></title>
+<meta charset="utf-8"/>
+</head>
+<body>
+<form name="form1">
+    Поиск на 
+    <select name="addr">
+        <option value="http://www.google.com">google</option>
+        <option value="https://www.yahoo.com/">yahoo</option>
+        <option value="https://duckduckgo.com/">duckduckgo</option>
+        <option value="http://www.findsounds.com/">findsounds</option>
+        <option value="http://www.dogpile.com/">dogpile</option>
+    </select>
+    <input type="button" value="Go!"/>
+</form>
+
+<script>
+
+
+let sel = document.forms['form1'].elements['addr'];
+let btn = document.querySelector('[type = "button"]');
+
+btn.addEventListener('click', () => {
+	let site = sel.options[sel.selectedIndex].value;
+	if(confirm('Уверен?')) window.open(site); 		//window.location.href = site;
+})
+	
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

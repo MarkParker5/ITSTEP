@@ -1,0 +1,8 @@
+button[value="logout"]{
+	border: none;
+	background: none;
+	color: blue;
+}
+button[value="logout"]:hover{
+	text-decoration: underline;
+}

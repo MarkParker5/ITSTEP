@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<style>
+#rect{
+width:50px; 
+height:50px; 
+background:#666;
+position: absolute; 
+top:0; 
+left:0;}
+</style>
+
+</head>
+
+<body>
+
+	<div id="rect"></div>
+
+  <script>
+	
+	/*-------Перемещение по диагонали--------*/
+	/*
+	var R=0;
+	var L=30*Math.PI/180; 
+	function move(){
+		R++;
+		var rect=document.getElementById("rect");
+		rect.style.left=R*Math.cos(L)+"px"//x
+		rect.style.top=R*Math.sin(L)+"px"//y
+		}
+	*/
+	/*-------Перемещение по кругу--------*/
+	
+	let R=200; // радиус вращения
+	let L=0; // не трогать
+	function move(){
+	L++;
+	let elem=document.getElementById("rect");
+	elem.style.left = R*Math.cos(L*Math.PI/180)+200+"px"//200x200 - центр вращения
+	elem.style.top = R*Math.sin(L*Math.PI/180)+200+"px"//
+	}
+	
+  	setInterval("move()", 10);//скорость вращения
+  	
+  </script>
+</body>
+</html>

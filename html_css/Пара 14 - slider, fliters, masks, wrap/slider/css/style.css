@@ -1,0 +1,108 @@
+body{
+	background: url(../img/bg.jpg);
+}
+
+/*CONTENT*/
+#slider{
+	position: relative;
+	min-width: 720px;
+	width: 80%;
+	max-width: 1280px;
+	margin: 0 auto;
+	margin-top: 20px;
+	box-shadow:  1px 1px 2px #414141, 3px 3px 10px #414141;
+}
+#slider .slides{
+	overflow: hidden;
+	background: #52539077;
+}
+#slider .slides ul{
+	width: 500%;
+	position: relative;
+	left: 0;
+	transition: left 0.5s;
+}
+#slider .slides ul li{
+	float: left;
+	width: 20%;
+}
+#slider .slides ul img{
+	width: 100%;
+}
+#slider input{
+	display: none;
+}
+
+/*CONTROL*/
+/*points*/
+#slider input+label{
+	display: block;
+	width: 8px;
+	height: 8px;
+	border: 2px solid #fff;
+	border-radius: 100%;
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	z-index: 10;
+	opacity: 0.75;
+}
+#slider input+label:hover, #slider input:checked+label{
+	transform: scale(1.25);
+	opacity: 1;
+}
+#slider input+label[for="pic1"]{
+	margin-left: -50px;
+}
+#slider input+label[for="pic2"]{
+	margin-left: -25px;
+}
+#slider input+label[for="pic4"]{
+	margin-left: 25px;
+}
+#slider input+label[for="pic5"]{
+	margin-left: 50px;
+}
+#slider input:checked+label{
+	background: #52539077;
+}
+#slider #pic1:checked~.slides ul{left: 0%;}
+#slider #pic2:checked~.slides ul{left: -100%;}
+#slider #pic3:checked~.slides ul{left: -200%;}
+#slider #pic4:checked~.slides ul{left: -300%;}
+#slider #pic5:checked~.slides ul{left: -400%;}
+/*arrows*/
+#slider .arrow{
+	display: none;
+	width: 27px;
+	height: 37px;
+	background: url(../img/arrows.png);
+	position: absolute;
+	top: 50%;
+	margin-top: -18px;
+	z-index: 10;
+	opacity: 0.75;
+	transition: 0.2s;
+}
+#slider .arrow:hover{
+	opacity: 1;
+	transform: scale(1.4);
+}
+#slider #pic1:checked~#arr2,
+#slider #pic2:checked~#arr3,
+#slider #pic3:checked~#arr4,
+#slider #pic4:checked~#arr5,
+#slider #pic5:checked~#arr1{
+	display: block;
+	right: 10px;
+	background-position: -27px 0;
+}
+#slider #pic2:checked~#arr1,
+#slider #pic3:checked~#arr2,
+#slider #pic4:checked~#arr3,
+#slider #pic5:checked~#arr4,
+#slider #pic1:checked~#arr5{
+	display: block;
+	left: 10px;
+}
+

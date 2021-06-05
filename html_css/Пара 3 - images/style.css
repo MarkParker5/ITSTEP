@@ -1,0 +1,28 @@
+.forest-img{
+	width: 550px;
+	height: auto;
+	/*border: 10px double green;*/
+	/*border-radius: 5%;*/
+	float: left;
+	margin-right: 15px;
+}
+.text-forest{
+
+}
+.kr-img{
+	width: 550px;
+	float: right;
+	margin-left: 15px;
+}
+.text-kr{
+
+}
+h1{
+	background-color: #ddd;
+	/*width: 400px;*/
+	text-align: center;
+}
+em{
+	background-color: #aaa;
+}
+
